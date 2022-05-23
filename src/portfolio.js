@@ -1,19 +1,19 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'https://rajshekhar26.github.io/cleanfolio',
-  title: 'JS.',
+  homepage: 'https://natefarcasin.xyz',
+  title: 'NF.',
 }
 
 const about = {
   // all the properties are optional - can be left empty or deleted
-  name: 'John Smith',
-  role: 'Front End Engineer',
+  name: 'Nate Farcasin',
+  role: 'Blockchain Developer',
   description:
-    'Adipisicing sit fugit ullam unde aliquid sequi Facilis soluta facilis perspiciatis corporis nulla aspernatur. Autem eligendi rerum delectus modi quisquam? Illo ut quasi nemo ipsa cumque perspiciatis! Maiores minima consectetur.',
-  resume: 'https://example.com',
+    'I fell in love with crypto, so I did what any sensible person does - I quit my job and dove right in. Solidity specialist with full stack experience',
+  resume: '',
   social: {
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
+    linkedin: 'https://www.linkedin.com/in/nate-farcasin-282a4771/',
+    github: 'https://github.com/n8urm8',
   },
 }
 
@@ -21,51 +21,53 @@ const projects = [
   // projects can be added an removed
   // if there are no projects, Projects section won't show up
   {
-    name: 'Project 1',
+    name: 'ShibaNova',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'An automated market maker, yield aggregator, and launchpad project. Features a multi-token governance system and daily profit-sharing.',
+    stack: ['Solidity', 'TypeScript', 'React'],
+    sourceCode: 'https://github.com/shibanova',
+    livePreview: '',
   },
   {
-    name: 'Project 2',
+    name: 'Legend of Novaria',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'A multiplayer, space-themed, strategy game built on the blockchain. Features multiplayer combat, an infinite exploration, and play to earn mechanics',
+    stack: ['Solidity', 'NodeJS', 'React'],
+    sourceCode: 'https://github.com/shibanova/novaria',
+    livePreview: 'https://novadex.finance/legend-of-novaria',
   },
   {
-    name: 'Project 3',
+    name: 'Kingdom',
     description:
-      'Amet asperiores et impedit aliquam consectetur? Voluptates sed a nulla ipsa officia et esse aliquam',
-    stack: ['SASS', 'TypeScript', 'React'],
-    sourceCode: 'https://github.com',
-    livePreview: 'https://github.com',
+      'A new project coming soon. Designed around the idea of bringing the ole Crown of the Gods (Lords of Ultima) to the blockchain',
+    stack: ['Solidity'],
+    sourceCode: 'https://github.com/n8urm8/ContractPlayGround',
+    livePreview: '',
   },
 ]
 
 const skills = [
   // skills can be added or removed
   // if there are no skills, Skills section won't show up
+  'Solidity',
+  'BlockChain',
+  'Game Design',
+  'Tokenomics',
   'HTML',
   'CSS',
   'JavaScript',
   'TypeScript',
   'React',
   'Redux',
-  'SASS',
-  'Material UI',
+  'NodeJS',
   'Git',
-  'CI/CD',
-  'Jest',
-  'Enzyme',
+  'Product Development',
+  'Project Management'
 ]
 
 const contact = {
   // email is optional - if left empty Contact section won't show up
-  email: 'johnsmith@mail.com',
+  email: 'natefarcasin@gmail.com',
 }
 
 export { header, about, projects, skills, contact }
