@@ -41,7 +41,7 @@ const projects = [
     description:
       'A new project coming soon. Designed around the idea of bringing the ole Crown of the Gods (Lords of Ultima) to the blockchain',
     stack: ['Solidity'],
-    sourceCode: 'https://github.com/n8urm8/ContractPlayGround',
+    sourceCode: 'https://github.com/n8urm8/Reignover/tree/master/packages/hardhat/contracts',
     livePreview: '',
   },
 ]
