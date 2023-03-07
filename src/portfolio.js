@@ -24,7 +24,7 @@ const projects = [
     name: 'ShibaNova',
     description:
       'An automated market maker, yield aggregator, and launchpad project. Features a multi-token governance system and daily profit-sharing.',
-    stack: ['Solidity', 'TypeScript', 'React'],
+    stack: ['Solidity', 'TypeScript', 'ReactJs', 'Styled Components'],
     sourceCode: 'https://github.com/shibanova',
     livePreview: '',
   },
@@ -32,23 +32,21 @@ const projects = [
     name: 'Legend of Novaria',
     description:
       'A multiplayer, space-themed, strategy game built on the blockchain. Features multiplayer combat, an infinite exploration, and play to earn mechanics',
-    stack: ['Solidity', 'NodeJS', 'React'],
+    stack: ['Solidity', 'NodeJS', 'ReactJs', 'JavaScript'],
     sourceCode: 'https://github.com/shibanova/novaria',
     livePreview: 'https://novadex.finance/legend-of-novaria',
   },
   {
-    name: 'Kingdom',
+    name: 'Reignover',
     description:
-      'A new project coming soon. Designed around the idea of bringing the ole Crown of the Gods (Lords of Ultima) to the blockchain',
-    stack: ['Solidity'],
-    sourceCode: 'https://github.com/n8urm8/Reignover/tree/master/packages/hardhat/contracts',
+      'An idle city development game integrated with blockchain assets.',
+    stack: ['Solidity', 'TypeScript', 'NextJs', 'SQL', 'Prisma', 'TailwindCSS'],
+    sourceCode: 'https://github.com/ReignoverProject/reignover',
     livePreview: '',
   },
 ]
 
 const skills = [
-  // skills can be added or removed
-  // if there are no skills, Skills section won't show up
   'Solidity',
   'BlockChain',
   'Game Design',
