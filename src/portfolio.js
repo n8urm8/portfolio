@@ -44,6 +44,14 @@ const projects = [
     sourceCode: 'https://github.com/ReignoverProject/reignover',
     livePreview: '',
   },
+  {
+    name: 'Metric-Imperial Converter',
+    description:
+      'REST api that Converts between metric and imperial units. Created using Node, Express, HTML.',
+    stack: ['JavaScript', 'NodeJS', 'REST', 'HTML', 'Express'],
+    sourceCode: 'https://github.com/n8urm8/metric-imperial-converter',
+    livePreview: 'https://sky-free-plutonium.glitch.me/',
+  },
 ]
 
 const skills = [
