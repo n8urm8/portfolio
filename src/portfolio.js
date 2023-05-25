@@ -7,9 +7,9 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Nate Farcasin',
-  role: 'Blockchain Developer',
+  role: 'Software Engineer',
   description:
-    'I fell in love with crypto, so I did what any sensible person does - I quit my job and dove right in. Solidity specialist with full stack experience',
+    'Frontend-leaning web devopler specialized in JavaScript frameworks.',
   resume: '',
   social: {
     linkedin: 'https://www.linkedin.com/in/nate-farcasin-282a4771/',
