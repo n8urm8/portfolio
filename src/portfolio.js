@@ -39,6 +39,14 @@ const projects = [
   {
     name: 'Reignover',
     description:
+      'Incremental, space-themed, tower-defense web game built with Phaser',
+    stack: ['Phaser', 'TypeScript', 'NextJs', 'SQL', 'Prisma', 'TailwindCSS'],
+    sourceCode: 'https://github.com/n8urm8/galactic-hero',
+    livePreview: '',
+  },
+  {
+    name: 'Galactic Hero',
+    description:
       'An idle city development game integrated with blockchain assets.',
     stack: ['Solidity', 'TypeScript', 'NextJs', 'SQL', 'Prisma', 'TailwindCSS'],
     sourceCode: 'https://github.com/ReignoverProject/reignover',
