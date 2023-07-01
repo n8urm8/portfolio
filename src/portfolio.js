@@ -1,6 +1,6 @@
 const header = {
   // all the properties are optional - can be left empty or deleted
-  homepage: 'https://natefarcasin.xyz',
+  homepage: 'https://natefarcasin.netlify.app',
   title: 'NF.',
 }
 
@@ -35,6 +35,22 @@ const projects = [
     stack: ['Solidity', 'NodeJS', 'ReactJs', 'JavaScript'],
     sourceCode: 'https://github.com/shibanova/novaria',
     livePreview: 'https://novadex.finance/legend-of-novaria',
+  },
+  {
+    name: 'Fetch',
+    description:
+      'A mock dog adoption website. Find your favorites and get matched!',
+    stack: ['Vite', 'TypeScript', 'React', 'REST', 'MaterialUI', 'Styled Components'],
+    sourceCode: 'https://github.com/n8urm8/fetch',
+    livePreview: 'https://fetch-rho-cyan.vercel.app/',
+  },
+  {
+    name: 'TF-Stats',
+    description:
+      'A data analytics website. Pulls stats from mobile game and displays graphically. Allows users to get details on their account without accessing the game.',
+    stack: ['NextJS', 'TypeScript', 'React', 'REST', 'TailwindCSS', 'Data Analytics'],
+    sourceCode: '',
+    livePreview: 'https://tf-stats.vercel.app/',
   },
   {
     name: 'Reignover',
@@ -72,7 +88,10 @@ const skills = [
   'JavaScript',
   'TypeScript',
   'React',
+  'NextJS',
+  'Vite',
   'Redux',
+  'SQL',
   'NodeJS',
   'Git',
   'Product Development',
