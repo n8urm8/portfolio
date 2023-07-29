@@ -66,7 +66,7 @@ const projects = [
       'An idle city development game integrated with blockchain assets.',
     stack: ['Solidity', 'TypeScript', 'NextJs', 'SQL', 'Prisma', 'TailwindCSS'],
     sourceCode: 'https://github.com/ReignoverProject/reignover',
-    livePreview: '',
+    livePreview: 'https://galactic-hero.vercel.app/',
   },
   {
     name: 'Metric-Imperial Converter',
