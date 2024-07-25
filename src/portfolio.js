@@ -7,9 +7,9 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Nate Farcasin',
-  role: 'Software Engineer',
+  role: 'A Fullstack Software Developer',
   description:
-    'Frontend-leaning web devopler specialized in JavaScript frameworks.',
+    'Frontend-leaning devopler specialized in React and other JavaScript frameworks.',
   resume: '',
   social: {
     linkedin: 'https://www.linkedin.com/in/nate-farcasin-282a4771/',
@@ -37,10 +37,32 @@ const projects = [
     livePreview: 'https://novadex.finance/legend-of-novaria',
   },
   {
+    name: 'Fuel',
+    description: 'Space-themed, incremental mobile game built with Godot 4',
+    stack: ['GDScript', 'Godot', 'Android', 'IOS'],
+    sourceCode: 'https://github.com/n8urm8/fuel',
+    livePreview: '',
+  },
+  {
+    name: 'Pizza Orderer',
+    description:
+      'Ordering and managing pizza orders for customers and restaurants',
+    stack: ['TypeScript', 'React Native', 'Expo', 'Supabase', 'React Query'],
+    sourceCode: 'https://github.com/n8urm8/pizza-orderer',
+    livePreview: '',
+  },
+  {
     name: 'Fetch',
     description:
       'A mock dog adoption website. Find your favorites and get matched!',
-    stack: ['Vite', 'TypeScript', 'React', 'REST', 'MaterialUI', 'Styled Components'],
+    stack: [
+      'Vite',
+      'TypeScript',
+      'React',
+      'REST',
+      'MaterialUI',
+      'Styled Components',
+    ],
     sourceCode: 'https://github.com/n8urm8/fetch',
     livePreview: 'https://fetch-rho-cyan.vercel.app/',
   },
@@ -48,25 +70,24 @@ const projects = [
     name: 'TF-Stats',
     description:
       'A data analytics website. Pulls stats from mobile game and displays graphically. Allows users to get details on their account without accessing the game.',
-    stack: ['NextJS', 'TypeScript', 'React', 'REST', 'TailwindCSS', 'Data Analytics'],
+    stack: [
+      'NextJS',
+      'TypeScript',
+      'React',
+      'REST',
+      'TailwindCSS',
+      'Data Analytics',
+    ],
     sourceCode: '',
     livePreview: 'https://tf-stats.vercel.app/',
   },
   {
-    name: 'Reignover',
+    name: 'Galactic Hero',
     description:
       'Incremental, space-themed, tower-defense web game built with Phaser',
     stack: ['Phaser', 'TypeScript', 'NextJs', 'SQL', 'Prisma', 'TailwindCSS'],
     sourceCode: 'https://github.com/n8urm8/galactic-hero',
     livePreview: '',
-  },
-  {
-    name: 'Galactic Hero',
-    description:
-      'An idle city development game integrated with blockchain assets.',
-    stack: ['Solidity', 'TypeScript', 'NextJs', 'SQL', 'Prisma', 'TailwindCSS'],
-    sourceCode: 'https://github.com/ReignoverProject/reignover',
-    livePreview: 'https://galactic-hero.vercel.app/',
   },
   {
     name: 'Metric-Imperial Converter',
@@ -95,7 +116,7 @@ const skills = [
   'NodeJS',
   'Git',
   'Product Development',
-  'Project Management'
+  'Project Management',
 ]
 
 const contact = {
