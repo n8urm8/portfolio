@@ -7,7 +7,7 @@ const header = {
 const about = {
   // all the properties are optional - can be left empty or deleted
   name: 'Nate Farcasin',
-  role: 'A Fullstack Software Developer',
+  role: 'Fullstack Software Developer',
   description:
     'Frontend-leaning devopler specialized in React and other JavaScript frameworks.',
   resume: '',
@@ -107,6 +107,9 @@ const skills = [
   'React',
   'NextJS',
   'Vite',
+  'C#',
+  '.net',
+  'Godot',
   'SQL',
   'NodeJS',
   'Git',
