@@ -100,10 +100,6 @@ const projects = [
 ]
 
 const skills = [
-  'Solidity',
-  'BlockChain',
-  'Game Design',
-  'Tokenomics',
   'HTML',
   'CSS',
   'JavaScript',
@@ -111,12 +107,15 @@ const skills = [
   'React',
   'NextJS',
   'Vite',
-  'Redux',
   'SQL',
   'NodeJS',
   'Git',
   'Product Development',
   'Project Management',
+  'Solidity',
+  'BlockChain',
+  'Game Design',
+  'Tokenomics',
 ]
 
 const contact = {
