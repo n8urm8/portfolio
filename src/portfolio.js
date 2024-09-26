@@ -41,7 +41,7 @@ const projects = [
     description: 'Space-themed, incremental mobile game built with Godot 4',
     stack: ['GDScript', 'Godot', 'Android', 'IOS'],
     sourceCode: 'https://github.com/n8urm8/fuel',
-    livePreview: '',
+    livePreview: 'https://play.google.com/store/apps/details?id=com.umbralstudios.fuel',
   },
   {
     name: 'Pizza Orderer',
