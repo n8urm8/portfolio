@@ -27,7 +27,7 @@ export default function ParallaxBackground({ scrollX }: { scrollX: number }) {
   }, [])
 
   return (
-    <div className='fixed inset-0 w-screen h-screen overflow-hidden pointer-events-none'>
+    <div className='fixed inset-0 w-[300vw] md:w-screen h-screen overflow-hidden pointer-events-none'>
       {layers.map((layer) => {
         // Calculate seamless offset
         const offset = (scrollX * layer.speed) % vw
@@ -36,7 +36,7 @@ export default function ParallaxBackground({ scrollX }: { scrollX: number }) {
             <motion.img
               key={layer.src + '-1'}
               src={layer.src}
-              className={`absolute w-screen h-screen object-cover ${layer.className}`}
+              className={`absolute w-[300vw] md:w-screen h-screen object-cover ${layer.className}`}
               style={{
                 left: 0,
                 transform: `translateX(-${offset}px)`,
@@ -45,18 +45,21 @@ export default function ParallaxBackground({ scrollX }: { scrollX: number }) {
               draggable={false}
               alt='parallax layer'
             />
-            <motion.img
-              key={layer.src + '-2'}
-              src={layer.src}
-              className={`absolute w-screen h-screen object-cover ${layer.className}`}
-              style={{
-                left: `${vw}px`,
-                transform: `translateX(-${offset}px)`,
-              }}
-              aria-hidden
-              draggable={false}
-              alt='parallax layer'
-            />
+            {/* Only render the second image for tiling on screens wider than 768px (md breakpoint) */}
+            {vw >= 768 && (
+              <motion.img
+                key={layer.src + '-2'}
+                src={layer.src}
+                className={`absolute w-screen h-screen object-cover ${layer.className}`}
+                style={{
+                  left: `${vw}px`,
+                  transform: `translateX(-${offset}px)`,
+                }}
+                aria-hidden
+                draggable={false}
+                alt='parallax layer'
+              />
+            )}
           </React.Fragment>
         )
       })}

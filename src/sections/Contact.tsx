@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <ThemedContentBox className='text-center text-white max-w-xl mx-auto'>
       {/* <div className="text-center text-white max-w-xl mx-auto"> */}
-      <h1 className='text-4xl md:text-4xl font-press-start mb-8 text-outline-black'>
+      <h1 className='text-3xl md:text-4xl font-press-start mb-8 text-outline-black'>
         Contact
       </h1>
       <p className='text-lg md:text-xl mb-4 drop-shadow-glow text-outline-black'>

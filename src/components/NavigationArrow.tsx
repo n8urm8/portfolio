@@ -16,7 +16,7 @@ export default function NavigationArrow({ direction, onClick, disabled }: Naviga
         fixed bottom-4 md:bottom-8 z-20
         font-press-start text-3xl md:text-4xl 
         ${positionClasses}
-        ${disabled ? 'text-gray-600 opacity-50 cursor-not-allowed' : 'text-fuchsia-500 hover:text-fuchsia-400 active:text-fuchsia-600 hover:scale-110 transition-transform'}
+        ${disabled ? 'text-gray-600 opacity-50 cursor-not-allowed' : 'text-fuchsia-500 hover:text-fuchsia-400 active:text-fuchsia-600 drop-shadow-glow hover:scale-110 transition-transform'}
         text-outline-black
         p-2
       `}
