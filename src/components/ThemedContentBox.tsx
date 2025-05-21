@@ -11,7 +11,7 @@ export default function ThemedContentBox({
     <div
       className={`
         bg-slate-800/70 
-        border-4 border-fuchsia-200 
+        border-2 border-fuchsia-200 
         rounded-lg 
         p-6 md:p-8 
         shadow-[0_0_25px_5px_rgba(217,70,239,0.6),inset_0_0_10px_rgba(217,70,239,0.3)]
