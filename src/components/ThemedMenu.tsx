@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 
 const menuItems = [
   { id: 'about', label: 'About', icon: '🦉' },
+  { id: 'projects', label: 'Work', icon: '💻' },
   { id: 'skills', label: 'Skills', icon: '💡' },
   { id: 'contact', label: 'Contact', icon: '📫' },
 ]
@@ -15,7 +16,7 @@ export default function ThemedMenu({
   return (
     <nav
       className='fixed top-8 left-1/2 bg-slate-800/70 z-50 backdrop-blur-sm -translate-x-1/2 flex 
-      gap-8 bg-[#181838cc] px-6 py-2 rounded-md border-4 border-cyan-100 
+      gap-8 bg-[#181838cc] px-6 py-2 rounded-md border-2 border-cyan-100 
         shadow-[0px_0px_25px_5px_rgba(46,231,255,.6)] font-press-start'
     >
       {menuItems.map((item) => (
