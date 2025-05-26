@@ -1,5 +1,26 @@
 export const projects = [
   {
+    name: 'Micro Job Board',
+    description:
+      'A modern, full-stack job board web application for the Charlotte area. Built for employers and job seekers to post, discover, and manage job opportunities with a beautiful, responsive UI and robust authentication.',
+    stack: [
+      'TypeScript',
+      'Vite',
+      'React',
+      'TailwindCSS',
+      'Tanstack Query',
+      'Auth0',
+      'Docker',
+      'PostgreSQL',
+      'Python',
+      'SQLAlchemy',
+      'FastAPI',
+      'Alembic',
+    ],
+    sourceCode: 'https://github.com/n8urm8/cjb',
+    livePreview: '',
+  },
+  {
     name: 'ShibaNova',
     description:
       'An automated market maker, yield aggregator, and launchpad project. Features a multi-token governance system and daily profit-sharing.',
