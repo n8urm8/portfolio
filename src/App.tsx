@@ -7,6 +7,7 @@ import About from './sections/About'
 import Skills from './sections/Skills'
 import Contact from './sections/Contact'
 import Projects from './sections/Projects'
+import { useSearchParams } from './hooks/useSearchParams'
 import './index.css'
 
 const ZONES = [
@@ -20,6 +21,49 @@ function App() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [currentZoneIndex, setCurrentZoneIndex] = useState(0)
   const [scrollX, setScrollX] = useState(0)
+  const { getSearchParam, setSearchParams } = useSearchParams()
+  const isInitialMount = useRef(true)
+
+  // Navigate to section based on URL param on mount
+  useEffect(() => {
+    const section = getSearchParam('section')
+    if (section && isInitialMount.current) {
+      const zoneIndex = ZONES.findIndex((zone) => zone.id === section)
+      if (zoneIndex !== -1) {
+        setCurrentZoneIndex(zoneIndex)
+        // Use setTimeout to ensure DOM is ready
+        setTimeout(() => {
+          handleNavigate(section)
+        }, 100)
+      }
+    }
+    isInitialMount.current = false
+  }, [])
+
+  // Update URL when section changes via scroll
+  useEffect(() => {
+    if (!isInitialMount.current) {
+      const currentZoneId = ZONES[currentZoneIndex]?.id
+      if (currentZoneId) {
+        setSearchParams({ section: currentZoneId })
+      }
+    }
+  }, [currentZoneIndex, setSearchParams])
+
+  // Handle browser back/forward buttons
+  useEffect(() => {
+    const handlePopState = () => {
+      const section = getSearchParam('section')
+      if (section) {
+        const zoneIndex = ZONES.findIndex((zone) => zone.id === section)
+        if (zoneIndex !== -1 && zoneIndex !== currentZoneIndex) {
+          handleNavigate(section)
+        }
+      }
+    }
+    window.addEventListener('popstate', handlePopState)
+    return () => window.removeEventListener('popstate', handlePopState)
+  }, [currentZoneIndex, getSearchParam])
 
   useEffect(() => {
     const handleScroll = () => {

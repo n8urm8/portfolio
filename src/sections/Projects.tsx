@@ -74,11 +74,12 @@ const Projects = () => {
   ) // allProjects is static, so empty dependency array is fine
 
   const [isHovering, setIsHovering] = useState(false)
+  const [isDragging, setIsDragging] = useState(false)
   const animationControls = useAnimationControls()
   const itemContainerRef = useRef<HTMLDivElement>(null)
   const [contentHeight, setContentHeight] = useState(0)
 
-  const DURATION_MULTIPLIER = 4 // Adjust for speed: lower is faster
+  const DURATION_MULTIPLIER = 5 // Adjust for speed: lower is faster
   const scrollDuration = useMemo(
     () => items.length * DURATION_MULTIPLIER,
     [items, DURATION_MULTIPLIER]
@@ -111,26 +112,38 @@ const Projects = () => {
     }
   }, [items]) // Re-measure if items change
 
-  // Effect to control animation based on hover and contentHeight
+  // Effect to control animation based on hover, drag, and contentHeight
   useEffect(() => {
     if (contentHeight === 0) return // Don't act if height not measured
 
-    if (isHovering) {
+    if (isHovering || isDragging) {
       animationControls.stop() // Stop the animation
     } else {
-      animationControls.start('animate') // Resume by starting the 'animate' variant
+      // Resume animation from current position with infinite loop
+      const resumeAnimation = async () => {
+        await animationControls.start({
+          y: '-50%',
+          transition: {
+            ease: 'linear',
+            duration: scrollDuration,
+            repeat: Infinity,
+            repeatType: 'loop' as const,
+          },
+        })
+      }
+      resumeAnimation()
     }
-  }, [isHovering, animationControls, scrollVariants, contentHeight])
+  }, [isHovering, isDragging, animationControls, scrollDuration, contentHeight])
 
   // Effect to start animation on mount (once contentHeight is available) and clean up
   useEffect(() => {
-    if (contentHeight > 0 && !isHovering) {
+    if (contentHeight > 0 && !isHovering && !isDragging) {
       animationControls.start('animate')
     }
     return () => {
       animationControls.stop() // Stop animation on component unmount
     }
-  }, [animationControls, contentHeight, scrollVariants, isHovering]) // isHovering added to re-evaluate if initial state is hovered
+  }, [animationControls, contentHeight, scrollVariants, isHovering, isDragging])
 
   return (
     <div className='max-w-xl max-h-[78vh] mt-6 flex flex-col items-center p-1 md:p-8 text-white overflow-hidden [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]'>
@@ -146,6 +159,8 @@ const Projects = () => {
           top: contentHeight > 0 ? -contentHeight / 2 : 0,
           bottom: 0,
         }}
+        onDragStart={() => setIsDragging(true)}
+        onDragEnd={() => setIsDragging(false)}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >

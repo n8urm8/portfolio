@@ -1,5 +1,17 @@
 export const projects = [
   {
+    name: 'React Canvas Charts',
+    description:
+      'An open source, React component library for rendering composable and performant charts using the HTML5 Canvas API. Currently a work in progress, but supports line and area charts. Focuses on high performance for large datasets and data streaming.',
+    stack: [
+      'TypeScript',
+      'React',
+      'Canvas'
+    ],
+    sourceCode: 'https://github.com/n8urm8/react-canvas-charts',
+    livePreview: 'https://react-canvas-charts.netlify.app/',
+  },
+  {
     name: 'Micro Job Board',
     description:
       'A modern, full-stack job board web application for the Charlotte area. Built for employers and job seekers to post, discover, and manage job opportunities with a beautiful, responsive UI and robust authentication.',
